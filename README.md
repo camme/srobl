@@ -13,5 +13,5 @@ This is what you should be able to write to control the robot
     åk fram 10 steg
     snurra till höger 2 steg
     tänd lampa 1
-    vänta 10 sekund
+    vänta 10 sekunder
     åk bak 1 steg
