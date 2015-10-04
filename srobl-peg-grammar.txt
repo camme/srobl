@@ -1,0 +1,26 @@
+
+program = (s:statment newline* {return s})*
+
+statment = (a:action whitespace d:direction whitespace s:steps { return {action: a, direction: d, steps:s}; }) 
+           /
+           (sa:subAction whitespace si:subIdentifier { return {subAction: sa, identifier: si}; })
+           /
+           (a:action whitespace t:time whitespace u:timeUnit { return {action: a, time: t, unit:u }; })
+
+steps = s:[0-9]+ whitespace 'steg' { return s.join(''); }
+
+action = 'åk' / 'snurra' / 'vänta'
+
+time = t:[0-9]+ { return t.join(''); }
+
+direction = 'fram' / 'bak' / 'till höger' / 'till vänster'
+
+whitespace = [ \s\t]
+
+newline = [\r\n] {return;}
+
+subAction = 'tänd lampa' / 'släck lampa'
+
+subIdentifier = '1' / '2'
+
+timeUnit =  'sekunder' / 'sekund' / 'minuter' / 'minut'
