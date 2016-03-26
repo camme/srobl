@@ -3,9 +3,9 @@
 import React from 'react';
 import { Link, State, Router, Route } from 'react-router';
 
-require('./socket');
+require('../../socket');
 
-let Start = require('./pages/start');
+let Start = require('../start');
 
 // var Header = require('./header/header');
 // var Footer = require('./footer');

@@ -1,4 +1,5 @@
 const React = require('react');
+const Editor = require('../../components/editor');
 
 class Start extends React.Component {
 
@@ -6,10 +7,13 @@ class Start extends React.Component {
         super(props, context);
     }
 
+
     render () {
 
         return (
-            <div>hej</div>
+            <div>
+                <Editor/>
+            </div>
         );
 
     }

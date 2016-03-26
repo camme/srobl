@@ -3,7 +3,7 @@
 import React from 'react';
 import { State, Router, Route } from 'react-router';
 
-var App = require('./app');
+var App = require('./pages/app');
 
 // Define the routes
 var routes = (
