@@ -25,6 +25,7 @@ function getEnvVar (name) {
 }
 
 exports.PORT = getOrError('PORT', 'Server port');
+exports.IMP_AGENT = getEnvVar('IMP_AGENT', 'Imp Agent');
 
 if (hasErrors) {
     process.exit(1);
