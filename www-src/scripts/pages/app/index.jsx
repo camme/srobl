@@ -37,7 +37,7 @@ var App = React.createClass({
         
         return (
             <div className="app">
-                <main>{ children }</main>
+                <main className="app--main">{ children }</main>
             </div>
         );
     }

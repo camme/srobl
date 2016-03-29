@@ -12,7 +12,8 @@ class Start extends React.Component {
 
         return (
             <div>
-                <Editor/>
+                <h1 className="start--title">SROBL</h1>
+                <Editor appState={this.props.appState}/>
             </div>
         );
 

@@ -77,7 +77,7 @@ gulp.task('nodemon', () => {
     nodemon({
         script: 'index.js',
         ext: 'js jsx',
-        watch: ['./lib', './www-src/scripts', './index.js'],
+        watch: ['./lib', './index.js'],
         ignore: ['sessions/*', 'www-dev/*'],
         verbose: false
     }).on('error', () => { console.log('err'); }); // eslint-disable-line
