@@ -60,9 +60,11 @@ class Editor extends React.Component {
                     {this.state.error}
                 </div>
             );
-
             button = (<div><Button type="error" disabled="true">Kör</Button></div>);
         } else {
+            error = (
+                <div className="editor--no-error">Koden ser bra ut!</div>
+            );
             button = (<div><Button onClick={this.runCode.bind(this)}>Kör</Button></div>);
         }
 
@@ -70,9 +72,9 @@ class Editor extends React.Component {
             <div className="editor--container">
                 <div className="editor--textarea-container">
                     <textarea className="editor--textarea" onChange={this.codeChange.bind(this)} value={this.state.code}></textarea>
+                    {error}
                 </div>
                 <div className="editor--actions-container">
-                    {error}
                     {button}
                 </div>
             </div>
