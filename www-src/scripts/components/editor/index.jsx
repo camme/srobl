@@ -63,7 +63,10 @@ class Editor extends React.Component {
             button = (<div><Button type="error" disabled="true">Kör</Button></div>);
         } else {
             error = (
-                <div className="editor--no-error">Koden ser bra ut!</div>
+                <div className="editor--no-error">
+                    <div>Koden ser bra ut.</div>
+                    <div>Bra jobbat!</div>
+                </div>
             );
             button = (<div><Button onClick={this.runCode.bind(this)}>Kör</Button></div>);
         }
